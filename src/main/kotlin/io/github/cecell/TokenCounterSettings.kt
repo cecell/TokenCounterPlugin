@@ -1,4 +1,4 @@
-package com.example.tokencounter
+package io.github.cecell
 
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.Service

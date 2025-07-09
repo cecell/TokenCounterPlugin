@@ -1,11 +1,10 @@
-
-package com.example.tokencounter
+package io.github.cecell
 
 import com.intellij.openapi.options.Configurable
 import javax.swing.*
 import com.intellij.openapi.ui.ComboBox
-//import com.example.tokencounter.TokenizerModel
-//import com.example.tokencounter.TokenCounterSettings
+//import io.github.cecell.TokenizerModel
+//import io.github.cecell.TokenCounterSettings
 
 class TokenCounterSettingsConfigurable : Configurable {
     private val comboBox = ComboBox<String>().apply {

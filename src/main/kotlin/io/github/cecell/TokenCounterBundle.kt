@@ -1,4 +1,4 @@
-package com.example.tokencounter
+package io.github.cecell
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

@@ -1,5 +1,4 @@
-
-package com.example.tokencounter
+package io.github.cecell
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

@@ -20,23 +20,23 @@
     <applicationConfigurable
             parentId="tools"
             id="com.example.tokencounter.settings"
-            instance="com.example.tokencounter.TokenCounterSettingsConfigurable"
+            instance="io.github.cecell.TokenCounterSettingsConfigurable"
             displayName="Token Counter"/>
 
     <applicationService
-            serviceImplementation="com.example.tokencounter.TokenCounterSettings"/>
+            serviceImplementation="io.github.cecell.TokenCounterSettings"/>
   </extensions>
 
   <actions>
     <action id="CountTokens"
-            class="com.example.tokencounter.CountTokensAction"
+            class="io.github.cecell.CountTokensAction"
             text="Count Tokens"
             description="Counts tokens in selected text with the selected model">
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
 
     <action id="TokenCounter.Settings"
-            class="com.example.tokencounter.OpenTokenCounterSettingsAction"
+            class="io.github.cecell.OpenTokenCounterSettingsAction"
             text="Token Counter Settings"
             description="Open token counter settings">
       <add-to-group group-id="ToolsMenu" anchor="last"/>
