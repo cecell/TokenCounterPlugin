@@ -1,0 +1,45 @@
+
+<idea-plugin>
+  <id>com.example.tokencounter</id>
+  <name>Token Counter</name>
+  <vendor>Cecell</vendor>
+  <version>1.0</version>
+  <description>
+    Counts tokens in selected text using OpenAI-compatible tokenizers.
+    Choose between GPT-3.5, GPT-4, or Claude models in Settings --> Tools --> Token Counter
+  </description>
+
+  <!-- PyCharm-specific dependency -->
+  <depends>com.intellij.modules.python</depends>
+
+  <idea-version since-build="241.0" until-build="251.*"/>
+
+  <resource-bundle>messages.TokenCounterBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable
+            parentId="tools"
+            id="com.example.tokencounter.settings"
+            instance="com.example.tokencounter.TokenCounterSettingsConfigurable"
+            displayName="Token Counter"/>
+
+    <applicationService
+            serviceImplementation="com.example.tokencounter.TokenCounterSettings"/>
+  </extensions>
+
+  <actions>
+    <action id="CountTokens"
+            class="com.example.tokencounter.CountTokensAction"
+            text="Count Tokens"
+            description="Counts tokens in selected text with the selected model">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+
+    <action id="TokenCounter.Settings"
+            class="com.example.tokencounter.OpenTokenCounterSettingsAction"
+            text="Token Counter Settings"
+            description="Open token counter settings">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </action>
+  </actions>
+</idea-plugin>
